@@ -1,7 +1,7 @@
 import cv2
 from tensorflow.keras.preprocessing.image import img_to_array
 import os
-import numpy as np
+import numpy as np 
 from tensorflow.keras.models import model_from_json
 import time
 
@@ -12,12 +12,12 @@ from email.message import EmailMessage
 # Define email sender and receiver
 email_sender = 'sumanthinturi420@gmail.com'
 email_password = 'mtpmdjcdofufreth'
-email_receiver = '19h51a0514@cmrcet.ac.in'
+email_receiver = 'lokesh.190514@gmail.com'
 
 # Set the subject and body of the email
-subject = 'asdasdads!'
+subject = 'Fraud detected!'
 body = """
-I'm the best
+Person using fake image...
 """
 
 em = EmailMessage()
