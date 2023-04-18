@@ -17,7 +17,14 @@ email_receiver = 'lokesh.190514@gmail.com'
 # Set the subject and body of the email
 subject = 'Fraud detected!'
 body = """
+Hi Team,
+
+
 Person using fake image...
+
+
+Thanks,
+Batch-34
 """
 
 em = EmailMessage()
@@ -34,6 +41,7 @@ def sendEmail():
     with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, em.as_string())
+    print("Email sent Successfully")     
 
 root_dir = os.getcwd()
 # Load Face Detection Model
@@ -51,6 +59,7 @@ print("Model loaded from disk")
 # time.sleep(2.0)
 
 video = cv2.VideoCapture(0)
+
 timer=int(0)
 
 while True:
@@ -93,6 +102,5 @@ while True:
             break
     except Exception as e:
         pass
-video.release()        
+video.release()
 cv2.destroyAllWindows()
-
